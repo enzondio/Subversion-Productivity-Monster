@@ -76,6 +76,7 @@ class SubversionMonster(object):
         Using the scalar_modifier and time_modifier calculate the contribution of a single commit, given
         the number of minutes since it occurred.
         """
+	#Note: The min makes the maximum commit 'size' 500.
         return self.scalar_modifier*min(lines, 500)*exp(-(minutes/self.time_modifier))
 
     def calculate_score(self,commits):
