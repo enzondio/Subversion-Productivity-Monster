@@ -69,7 +69,7 @@ class SubversionMonster(object):
         """
         inp = int(min(inp, self.total_range))
         print [self.redVal(inp), self.blueVal(inp), self.greenVal(inp)]
-        return [min(254, self.redVal(inp)), min(254, self.blueVal(inp)), min(254,self.greenVal(inp))]
+        return [int(self.redVal(inp)), int(self.blueVal(inp)), int(self.greenVal(inp))]
 
     def productivity_point(self, minutes, lines):
         """
