@@ -68,7 +68,6 @@ class SubversionMonster(object):
         TODO: This could be moved to the Arduino class.
         """
         inp = int(min(inp, self.total_range))
-        print [self.redVal(inp), self.blueVal(inp), self.greenVal(inp)]
         return [int(self.redVal(inp)), int(self.blueVal(inp)), int(self.greenVal(inp))]
 
     def productivity_point(self, minutes, lines):
